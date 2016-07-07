@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+      function onLoad() {
+        navigator.geolocation.watchPosition(function(position) {
+            var lat = position.coords.latitude;
+            var long = position.coords.longitude;
+          
+            document.getElementById('out').innerHTML = "(" + lat + "," + long + ")";
+        });
+        
+      };
+    </script>
+  </head>
+  <body onLoad = "onLoad();">
+    <div id="out"></div>
+  </body>
+</html>
